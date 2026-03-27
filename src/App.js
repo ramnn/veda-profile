@@ -3,40 +3,46 @@ import logo from "./assets/vedaLogo.png";
 
 const projects = [
   {
-    title: "Contemporary 3BHK Residence",
-    location: "Ahmedabad",
-    category: "Residential",
+    id: 1,
     image: "/projects/p1.jpg",
+    category: "STYLE",
+    title: "Japandi Serenity",
+    location: "Ahmedabad",
   },
   {
-    title: "Luxury Villa Interiors",
-    location: "Gandhinagar",
-    category: "Residential",
+    id: 2,
     image: "/projects/p2.jpg",
+    category: "STYLE",
+    title: "Warm Minimal Haven",
+    location: "Gandhinagar",
   },
   {
-    title: "Corporate Workspace Design",
-    location: "SG Highway",
-    category: "Commercial",
+    id: 3,
     image: "/projects/p3.jpg",
+    category: "STYLE",
+    title: "Modern Zen Workspace",
+    location: "SG Highway",
   },
   {
-    title: "Modern Living Room Design",
-    location: "Satellite",
-    category: "Residential",
+    id: 4,
     image: "/projects/p4.jpg",
+    category: "STYLE",
+    title: "Nordic Calm Living",
+    location: "Satellite",
   },
   {
-    title: "Elegant Dining Area",
-    location: "CG Road",
-    category: "Residential",
+    id: 5,
     image: "/projects/p5.jpg",
+    category: "STYLE",
+    title: "Neutral Luxe Dining",
+    location: "CG Road",
   },
   {
-    title: "Minimalist Bedroom Design",
-    location: "Bopal",
-    category: "Residential",
+    id: 6,
     image: "/projects/p6.jpg",
+    category: "STYLE",
+    title: "Minimal Zen Bedroom",
+    location: "Bopal",
   },
 ];
 
@@ -139,7 +145,7 @@ export default function App() {
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-5xl mx-auto px-6 py-24">
+      <section className="max-w-7xl mx-auto px-6 py-24">
         <p className="reveal-text text-xs tracking-[4px] text-teal-600 mb-3 uppercase">
           {splitText("01 — Who We Are")}
         </p>
@@ -164,7 +170,7 @@ export default function App() {
       </section>
 
       {/* SERVICES */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20">
         <p className="reveal-text text-xs tracking-[4px] text-teal-600 mb-3 uppercase">
           {splitText("02 — What We Do")}
         </p>
@@ -183,7 +189,7 @@ export default function App() {
             "Custom Furniture",
             "Turnkey Execution",
             "Project Management",
-          ].map((item, i) => (
+          ]?.map((item, i) => (
             <div
               key={i}
               className="fade-up bg-white p-6 hover:border-l-4 hover:border-teal-600 hover:shadow-md transition"
@@ -199,7 +205,7 @@ export default function App() {
       </section>
 
       {/* EXPERTISE */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20">
         <p className="reveal-text text-xs tracking-[4px] text-teal-600 mb-3 uppercase">
           {splitText("03 — Our Expertise")}
         </p>
@@ -215,7 +221,7 @@ export default function App() {
           "Luxury Living",
           "Storage Solutions",
           "Custom Furniture",
-        ].map((item, i) => (
+        ]?.map((item, i) => (
           <div
             key={i}
             className="fade-up flex justify-between border-b py-4"
@@ -231,47 +237,52 @@ export default function App() {
       </section>
 
       {/* PROJECTS */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <p className="reveal-text text-xs tracking-[4px] text-teal-600 mb-3 uppercase">
-          {splitText("05 — Our Work")}
+      <section className="max-w-7xl mx-auto px-6 py-20 bg-[#f8f6f3] py-16 px-6 md:px-12">
+        {/* Tag */}
+        <p className="text-[12px] tracking-[3px] text-[#b0a89f] mb-3">
+          OUR WORK
         </p>
 
-        <h2 className="fade-up delay-1 text-4xl font-light mb-6">
-          Completed <span className="italic text-teal-600">Projects</span>
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-medium text-[#2c2c2c] mb-10">
+          Featured <span className="text-[#8c7b6b]">Styles</span>
         </h2>
 
-        <div className="fade-up delay-2 w-12 h-1 bg-teal-600 mb-10" />
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects?.map((item) => (
             <div
-              key={index}
-              className="fade-up group bg-white border rounded-xl overflow-hidden hover:shadow-2xl transition duration-300"
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              key={item.id}
+              className="group relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition duration-500"
             >
               {/* Image */}
               <div className="overflow-hidden">
                 <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-48 w-full object-cover group-hover:scale-110 transition duration-500"
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500"
                 />
               </div>
 
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+
               {/* Content */}
-              <div className="p-4 group-hover:bg-gray-50 transition">
-                {/* Category */}
-                <p className="text-xs text-teal-600 uppercase tracking-wide mb-1">
-                  {project.category}
+              <div className="absolute bottom-0 p-5 text-white">
+                <p className="text-[11px] tracking-[2px] text-[#d6cfc7] mb-1">
+                  {item.category}
                 </p>
 
-                {/* Title */}
-                <h3 className="text-lg font-medium tracking-wide mb-1">
-                  {project.title}
+                <h3 className="text-lg font-medium leading-snug">
+                  {item.title}
                 </h3>
 
-                {/* Location */}
-                <p className="text-sm text-gray-500">{project.location}</p>
+                <p className="text-sm text-gray-200 mb-3">{item.location}</p>
+
+                {/* Button */}
+                <button className="bg-white/90 text-[#2c2c2c] text-sm px-4 py-1.5 rounded-full opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+                  View Style →
+                </button>
               </div>
             </div>
           ))}
@@ -279,7 +290,7 @@ export default function App() {
       </section>
 
       {/* WHY US */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20">
         <p className="reveal-text text-xs tracking-[4px] text-teal-600 mb-3 uppercase">
           {splitText("04 — Why Us")}
         </p>
@@ -298,7 +309,7 @@ export default function App() {
             "Custom Designs",
             "All-in-One Solution",
             "Budget Friendly",
-          ].map((item, i) => (
+          ]?.map((item, i) => (
             <div
               key={i}
               className="fade-up flex gap-3"
@@ -315,7 +326,7 @@ export default function App() {
 
       {/* CONTACT */}
       <section className="bg-gray-900 text-white px-6 py-20">
-        <div className="max-w-5xl mx-auto">
+        <div className="fade-up delay-1 max-w-7xl mx-auto">
           <h2 className="text-5xl font-light mb-2">
             <span className="text-teal-400">VEDA INTERIO</span>
           </h2>
