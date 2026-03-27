@@ -3,33 +3,39 @@ import logo from "./assets/vedaLogo.png";
 
 const projects = [
   {
-    title: "Modern 3BHK Apartment",
+    title: "Contemporary 3BHK Residence",
     location: "Ahmedabad",
+    category: "Residential",
     image: "/projects/p1.jpg",
   },
   {
-    title: "Luxury Villa Interior",
+    title: "Luxury Villa Interiors",
     location: "Gandhinagar",
+    category: "Residential",
     image: "/projects/p2.jpg",
   },
   {
-    title: "Corporate Office Design",
+    title: "Corporate Workspace Design",
     location: "SG Highway",
+    category: "Commercial",
     image: "/projects/p3.jpg",
   },
   {
-    title: "Living Setup",
+    title: "Modern Living Room Design",
     location: "Satellite",
+    category: "Residential",
     image: "/projects/p4.jpg",
   },
   {
-    title: "Dinning Hall",
+    title: "Elegant Dining Area",
     location: "CG Road",
+    category: "Residential",
     image: "/projects/p5.jpg",
   },
   {
-    title: "Minimal Bedroom",
+    title: "Minimalist Bedroom Design",
     location: "Bopal",
+    category: "Residential",
     image: "/projects/p6.jpg",
   },
 ];
@@ -240,17 +246,31 @@ export default function App() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="fade-up group bg-white border hover:shadow-xl transition overflow-hidden"
+              className="fade-up group bg-white border rounded-xl overflow-hidden hover:shadow-2xl transition duration-300"
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="h-48 w-full object-cover group-hover:scale-105 transition duration-300"
-              />
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-48 w-full object-cover group-hover:scale-110 transition duration-500"
+                />
+              </div>
 
-              <div className="p-4">
-                <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+              {/* Content */}
+              <div className="p-4 group-hover:bg-gray-50 transition">
+                {/* Category */}
+                <p className="text-xs text-teal-600 uppercase tracking-wide mb-1">
+                  {project.category}
+                </p>
+
+                {/* Title */}
+                <h3 className="text-lg font-medium tracking-wide mb-1">
+                  {project.title}
+                </h3>
+
+                {/* Location */}
                 <p className="text-sm text-gray-500">{project.location}</p>
               </div>
             </div>
