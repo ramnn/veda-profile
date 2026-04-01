@@ -89,7 +89,7 @@ export default function App() {
         {/* Logo */}
         <img
           src={logo}
-          alt="Veda Interio Logo"
+          alt="Veda Interiors Logo"
           className="w-44 md:w-60 mb-6 fade-up delay-3 object-contain"
         />
 
@@ -158,7 +158,7 @@ export default function App() {
         <div className="fade-up delay-2 w-12 h-1 bg-teal-600 mb-8" />
 
         <p className="fade-up delay-3 text-gray-700 mb-4 leading-relaxed">
-          Veda Interio is a professional interior design firm specializing in
+          Veda Interiors is a professional interior design firm specializing in
           turnkey projects with focus on quality, functionality, and aesthetics.
         </p>
 
@@ -328,7 +328,7 @@ export default function App() {
       <section className="bg-gray-900 text-white px-6 py-20">
         <div className="fade-up delay-1 max-w-7xl mx-auto">
           <h2 className="text-5xl font-light mb-2">
-            <span className="text-teal-400">VEDA INTERIO</span>
+            <span className="text-teal-400">VEDA INTERIORS</span>
           </h2>
 
           <p className="text-xs tracking-[3px] text-teal-500 mb-10 uppercase">
