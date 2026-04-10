@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "./assets/vedaLogo.png";
+import logo from "./assets/logo-dark.jpeg";
 
 const projects = [
   {
@@ -82,7 +82,7 @@ export default function App() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-700 via-teal-500 to-teal-700" />
 
         {/* Small Tag */}
-        <p className="text-xs tracking-[4px] font-semibold text-teal-600 mb-6 uppercase">
+        <p className="text-[14px] tracking-[4px] font-semibold text-teal-600 mb-6 uppercase">
           Full Interior Design · Ahmedabad
         </p>
 
@@ -115,14 +115,14 @@ export default function App() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 my-5">
           <a
-            href="tel:+919274716603"
+            href="tel:+918200653052"
             className="px-6 py-3 bg-teal-600 text-white text-sm tracking-wide uppercase hover:bg-teal-700 transition"
           >
             Call Now
           </a>
 
           <a
-            href="https://wa.me/919274716603"
+            href="https://wa.me/918200653052?text=Hi%20I%20want%20to%20discuss%20my%20interior%20project"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border border-teal-600 text-teal-600 text-sm tracking-wide uppercase hover:bg-teal-600 hover:text-white transition"
@@ -351,10 +351,10 @@ export default function App() {
             <div>
               <p className="text-xs text-teal-500 uppercase mb-1">Phone</p>
               <a
-                href="tel:+919274716603"
+                href="tel:+918200653052"
                 className="text-lg hover:text-teal-300 transition"
               >
-                +91 9274716603
+                +91 82006 53052
               </a>
             </div>
 
